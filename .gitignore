@@ -1,0 +1,11 @@
+a.out
+.*.swp
+*~
+*-demo.c
+*-demo.cl
+*.o
+print-devices
+vec-add
+vec-add-soln
+transpose
+transpose-son

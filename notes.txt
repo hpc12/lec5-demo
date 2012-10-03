@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+software installation demo
+-------------------------------------------------------------------------------
+- make sure to use 'name'
+-------------------------------------------------------------------------------
+git demo
+-------------------------------------------------------------------------------
+- split screen four ways
+
+- make new dir
+- git init
+- (git log)
+- add a.c
+- commit
+- git log
+
+- edit again
+- git status
+- .gitignore
+- add .gitignore
+- git status
+- the staging area (the "index")
+- git add --interactive
+
+- tig --all
+- "what's this 'master' thing?"
+- git branch new-feature
+- make a commit
+- git checkout master
+- make a commit
+
+- Blaise asks for my code
+- clone
+- set up tig
+
+- merge new-feature
+- make another commit
+
+- make another commit as blaise
+- git fetch ../blaises-copy master:from-blaise
+- merge from-blaise
+
+- git fetch ssh://sdfasdfasd...
+- git fetch URL
+- git remotes are bookmarks for these URLs
+- git help <COMMAND>
+
+- pull = fetch+merge
+- push = inverse pull (but: cannot resolve conflicts,
+  therefore must be fast-forward)
+
+-------------------------------------------------------------------------------
+transpose
+-------------------------------------------------------------------------------
+- walk through
+- develop in-place transpose
+- kernel
+- note: need odd number of trips :)
+- run with 8192
+
+- dropped most of our mem bw
+- ideas how to recover?
+- contiguity of mem access?
+
+< device lang slides
+
+- modify to non-inplace
+- modify to blocky
+- modify to local w/no sync
+
+< sync slides
+
+- add sync
+-------------------------------------------------------------------------------
+intro mpi
+-------------------------------------------------------------------------------
