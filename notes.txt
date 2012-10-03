@@ -99,6 +99,9 @@ intro mpi
 - usually: set by queuing system
   (underhanded info, qsub -I)
 
+- show on bowery (if possible)
+  module load openmpi/intel/1.6
+
 - fancier ways exist (per core? per socket?)
 
 - 

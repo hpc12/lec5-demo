@@ -20,7 +20,7 @@ transpose-soln: transpose-soln.c cl-helper.o
 	mpicc $(CL_CFLAGS) $(CL_LDFLAGS) -std=gnu99 -lrt -lOpenCL -o$@ $^
 
 hello-mpi: hello-mpi.c
-	mpicc -std=gnu99 -lrt -lOpenCL -o$@ $^
+	mpicc -std=gnu99 -lrt -o$@ $^
 
 %.o : %.c %.h
 	mpicc -c $(CL_CFLAGS) -std=gnu99 $<
