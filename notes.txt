@@ -100,12 +100,53 @@ intro mpi
   (underhanded info, qsub -I)
 
 - show on bowery (if possible)
-  module load openmpi/intel/1.6
   qsub -l nodes=2 -q interactive -I
+  module load openmpi/intel/1.6
 
 - The typical MPI job is a batch job, run by a 'script'.
   See NYU HPC wiki under "Running jobs"
 
-- fancier ways exist (per core? per socket?)
+-------------------------------------------------------------------------------
+mpi-send:
 
-- 
+- MPI_Send(buf, count, type, dest, tag, comm);
+- MPI_Recv(buf, count, type, dest, tag, comm, status);
+  MPI_ANY_SOURCE
+  MPI_ANY_TAG
+  stat.MPI_SOURCE, stat.MPI_TAG
+
+- Why does MPI need to know the type?
+  - What if you'd like to send structured data?
+    -> Cheat, send it as a bag of MPI_BYTE
+    -> Tell MPI about the data type
+      man MPI_Type_<tab>
+
+- First transmit entire buffer.
+
+- run just plain (-> error)
+
+- run full
+
+- What about variable-size data? (later!)
+- MPI_Get_count(status, type, &count)
+
+- What about truly variable-size data? (MPI_Probe)
+- send too much
+
+-------------------------------------------------------------------------------
+mpi-2send:
+
+- Write send-then-receive with 1024 buf
+- Increase to 16384
+- Add printf.
+
+- Wrong mental model!
+- Correct? What is the *meaning* of what we wrote?
+
+< standard
+
+- Fix by reordering
+
+- n neighbor exchanges
+  odd/even a solution
+  what if odd number of ranks?

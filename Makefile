@@ -1,5 +1,6 @@
-EXECUTABLES = print-devices transpose transpose-soln hello-mpi \
-  hello-mpi-soln
+EXECUTABLES = print-devices transpose transpose-soln \
+	      mpi-hello mpi-hello-soln \
+	      mpi-send-soln mpi-2send-soln
 
 all: $(EXECUTABLES)
 
@@ -20,10 +21,7 @@ transpose: transpose.c cl-helper.o
 transpose-soln: transpose-soln.c cl-helper.o
 	mpicc $(CL_CFLAGS) $(CL_LDFLAGS) -std=gnu99 -lrt -lOpenCL -o$@ $^
 
-hello-mpi: hello-mpi.c
-	mpicc -std=gnu99 -lrt -o$@ $^
-
-hello-mpi-soln: hello-mpi-soln.c
+mpi%: mpi%.c
 	mpicc -std=gnu99 -lrt -o$@ $^
 
 %.o : %.c %.h

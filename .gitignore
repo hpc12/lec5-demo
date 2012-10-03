@@ -9,3 +9,5 @@ print-devices
 transpose
 transpose-soln
 hello-mpi
+*-soln
+mpi-hello
