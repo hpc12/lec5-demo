@@ -1,11 +1,11 @@
 a.out
-.*.swp
+.*.sw[op]
+.sw[op]
 *~
 *-demo.c
 *-demo.cl
 *.o
 print-devices
-vec-add
-vec-add-soln
 transpose
-transpose-son
+transpose-soln
+hello-mpi

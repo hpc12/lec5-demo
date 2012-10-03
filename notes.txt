@@ -74,3 +74,31 @@ transpose
 -------------------------------------------------------------------------------
 intro mpi
 -------------------------------------------------------------------------------
+- documentation (install, "openmpi-doc", tab completion on man)
+
+- walk through demo
+- 'rank' terminology
+
+- why no error handling?
+- MPI_Comm_set_errhandler(MPI_COMM_WORLD, MPI_ERRORS_ARE_FATAL);
+
+- just run
+- mpiexec -n 5
+- ("mpirun"? <- non-standard)
+
+- mpiexec -n 4 ocean : -n 8 air
+
+- char name[MPI_MAX_PROCESSOR_NAME];
+  int namelen;
+  MPI_Get_processor_name(name, &namelen);
+
+- mpiexec -n 5 -H box,slate
+- mpiexec -n 5 -H box,slate -npernode 3
+
+- warning: -H, -npernode nonstandard
+- usually: set by queuing system
+  (underhanded info, qsub -I)
+
+- fancier ways exist (per core? per socket?)
+
+- 
