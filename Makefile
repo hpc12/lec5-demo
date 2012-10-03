@@ -1,6 +1,8 @@
 EXECUTABLES = print-devices transpose transpose-soln \
 	      mpi-hello mpi-hello-soln \
-	      mpi-send-soln mpi-2send-soln
+	      mpi-send-soln mpi-2send-soln \
+	      mpi-nonblock-soln mpi-neighbor \
+	      mpi-periodic-send2-soln
 
 all: $(EXECUTABLES)
 
